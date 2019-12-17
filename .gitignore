@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+#vscode config
+.vscode
+
+.git
+.idea
+
+package-lock.json
+yarn.lock
