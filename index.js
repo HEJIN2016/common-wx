@@ -192,8 +192,9 @@ app.get('/api/weixin/mp-sign', (req, res, next)=>{
   };
 
   let string = raw(obj);
-  let shaObj = new jsSHA(string, 'TEXT');
-  let signature = shaObj.getHash('SHA-1', 'HEX');
+  let shaObj = new jsSHA("SHA-1", "TEXT");
+  shaObj.update(string);
+  let signature = shaObj.getHash("HEX");
 
   res.send({
     success: true,
